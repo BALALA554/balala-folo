@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balala Folo — Social Media Boost</title>
+
+<style>
+:root{
+  --bg:#0b0b10; --card:#11111a; --text:#f3f4f6; --muted:#b7bcc8;
+  --brand:#7c3aed; --brand2:#2563eb; --border:rgba(255,255,255,.08);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Arial;
+  background:linear-gradient(120deg,#0b0b10,#0e0e18);
+  color:var(--text);
+}
+.wrap{max-width:1100px;margin:auto;padding:20px}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+}
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  color:#fff;
+  font-weight:800;
+  text-decoration:none;
+}
+.grid{display:grid;gap:16px}
+.grid3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.grid3{grid-template-columns:1fr}}
+
+header{
+  position:sticky;top:0;
+  background:#0b0b10cc;
+  border-bottom:1px solid var(--border);
+}
+.nav{display:flex;align-items:center;justify-content:space-between}
+
+.logo-box{display:flex;gap:12px;align-items:center}
+.logo{width:44px;height:44px}
+
+.whatsapp{
+  position:fixed;
+  bottom:20px;right:20px;
+  background:#22c55e;
+  color:#052e16;
+  padding:14px 18px;
+  border-radius:16px;
+  font-weight:900;
+  text-decoration:none;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo-box">
+      <!-- LOGO -->
+      <svg class="logo" viewBox="0 0 64 64">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#7c3aed"/>
+            <stop offset="1" stop-color="#2563eb"/>
+          </linearGradient>
+        </defs>
+        <rect width="64" height="64" rx="16" fill="url(#g)"/>
+        <path d="M18 40c6-10 12-16 18-16 6 0 10 4 10 10 0 8-7 12-16 12H18z" fill="#fff"/>
+        <circle cx="42" cy="26" r="5" fill="#fff"/>
+      </svg>
+      <div>
+        <strong>Balala Folo</strong><br>
+        <small style="color:#b7bcc8">Social Media Boost</small>
+      </div>
+    </div>
+    <a class="btn" href="#contact">Order</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- HERO -->
+<section class="card">
+  <h1>Boost your Instagram 🚀</h1>
+  <p style="color:#b7bcc8">
+    Views • Engagement • Followers growth via real promotion campaigns
+  </p>
+  <a class="btn" href="#contact">Order on WhatsApp</a>
+</section>
+
+<!-- SERVICES -->
+<section class="wrap">
+<h2>Services</h2>
+<div class="grid grid3">
+
+<div class="card">
+<h3>👀 Views Boost (Ads)</h3>
+<p>Real reach & impressions using promotion campaigns.</p>
+</div>
+
+<div class="card">
+<h3>❤️ Likes / Engagement Boost</h3>
+<p>Engagement-focused campaigns to increase likes & interaction.</p>
+</div>
+
+<div class="card">
+<h3>➕ Followers Growth</h3>
+<p>Targeted campaigns to attract interested followers.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PRICING -->
+<section class="wrap">
+<h2>Pricing</h2>
+<div class="grid grid3">
+
+<div class="card">
+<h3>Views Boost</h3>
+<p style="font-size:32px;font-weight:900">5 DH / 1000</p>
+<p class="muted">Reach & impressions via ads</p>
+</div>
+
+<div class="card">
+<h3>Likes Boost</h3>
+<p style="font-size:32px;font-weight:900">5 DH / 1000</p>
+<p class="muted">Engagement-focused promotion</p>
+</div>
+
+<div class="card">
+<h3>Followers Growth</h3>
+<p style="font-size:32px;font-weight:900">15 DH / 1000</p>
+<p class="muted">Targeted growth campaigns</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="card">
+<h2>Order via WhatsApp</h2>
+<p style="color:#b7bcc8">Send us your Instagram username & service.</p>
+<a class="btn" 
+href="https://wa.me/212619343394?text=Hi%20I%20want%20to%20order%20a%20service%20from%20Balala%20Folo">
+Chat on WhatsApp
+</a>
+</section>
+
+</main>
+
+<a class="whatsapp"
+href="https://wa.me/212619343394?text=Hi%20I%20want%20to%20order%20a%20service%20from%20Balala%20Folo">
+WhatsApp
+</a>
+
+</body>
+</html>
