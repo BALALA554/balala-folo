@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin | Balala Folo</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/>
+        </linearGradient></defs>
+        <rect width="64" height="64" rx="16" fill="url(#g)"/>
+        <path d="M18 40c6-10 12-16 18-16 6 0 10 4 10 10 0 8-7 12-16 12H18z" fill="rgba(255,255,255,.92)"/>
+        <circle cx="42" cy="26" r="5" fill="rgba(255,255,255,.92)"/>
+      </svg>
+      <div>
+        <div style="font-size:16px;">Balala Folo</div>
+        <div style="font-size:12px; color:var(--muted); font-weight:900;">Admin Panel</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./admin.html">Admin</a>
+      <a href="./login.html">Login</a>
+    </div>
+    <button class="btn" id="btnLogout">Logout</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <div class="title">Admin access</div>
+    <h2>Admin</h2>
+    <p class="muted small">Your UID: <span id="uid"></span></p>
+    <div id="msg" class="muted"></div>
+
+    <div id="panel" style="display:none; margin-top:12px">
+      <hr>
+      <div class="title">All orders</div>
+      <p class="muted small">Change status from the dropdown.</p>
+
+      <table class="table" style="margin-top:10px">
+        <thead>
+          <tr>
+            <th>Date</th><th>IG</th><th>Service/Qty</th><th>Country/Niche</th><th>Price</th><th>Status</th><th>Update</th>
+          </tr>
+        </thead>
+        <tbody id="ordersBody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="./app-admin.js"></script>
+</body>
+</html>

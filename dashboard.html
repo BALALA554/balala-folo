@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard | Balala Folo</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/>
+        </linearGradient></defs>
+        <rect width="64" height="64" rx="16" fill="url(#g)"/>
+        <path d="M18 40c6-10 12-16 18-16 6 0 10 4 10 10 0 8-7 12-16 12H18z" fill="rgba(255,255,255,.92)"/>
+        <circle cx="42" cy="26" r="5" fill="rgba(255,255,255,.92)"/>
+      </svg>
+      <div>
+        <div style="font-size:16px;">Balala Folo</div>
+        <div style="font-size:12px; color:var(--muted); font-weight:900;">Dashboard</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./admin.html">Admin</a>
+      <a href="./login.html">Login</a>
+    </div>
+    <button class="btn" id="btnLogout">Logout</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="grid2">
+    <div class="card">
+      <div class="title">New order</div>
+      <h2>Create an order</h2>
+      <p class="muted small">Your UID: <span id="uid"></span> — Email: <span id="emailShow"></span></p>
+
+      <form id="orderForm">
+        <div class="grid2" style="margin-top:12px">
+          <div>
+            <label class="muted small">Instagram @username</label>
+            <input id="ig" placeholder="@username" required />
+          </div>
+          <div>
+            <label class="muted small">Service</label>
+            <select id="service" required>
+              <option value="views">Views Boost (Promotion) — 5/1000</option>
+              <option value="engagement">Engagement Boost — 5/1000</option>
+              <option value="followers">Followers Growth — 15/1000</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid2" style="margin-top:12px">
+          <div>
+            <label class="muted small">Quantity</label>
+            <input id="quantity" type="number" min="1000" step="1000" value="1000" required />
+          </div>
+          <div>
+            <label class="muted small">Price preview</label>
+            <div class="card" style="box-shadow:none; padding:12px; border-radius:14px">
+              <strong id="pricePreview">—</strong>
+              <div class="muted small">Service fee</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid2" style="margin-top:12px">
+          <div>
+            <label class="muted small">Niche</label>
+            <select id="niche" required>
+              <option>Gaming</option>
+              <option>Music</option>
+              <option>Business</option>
+              <option>Personal Brand</option>
+              <option>Fitness</option>
+              <option>Beauty</option>
+            </select>
+          </div>
+          <div>
+            <label class="muted small">Target country / city</label>
+            <input id="country" placeholder="Morocco, Casablanca" required />
+          </div>
+        </div>
+
+        <div class="grid2" style="margin-top:12px">
+          <div>
+            <label class="muted small">Payment</label>
+            <select id="payment" required>
+              <option>Cash</option>
+              <option>Bank transfer</option>
+            </select>
+          </div>
+          <div>
+            <label class="muted small">Notes</label>
+            <input id="notes" placeholder="Goal / link / extra" />
+          </div>
+        </div>
+
+        <button class="btn good" style="width:100%; margin-top:12px" type="submit">Submit order</button>
+        <div id="msg" class="muted small" style="margin-top:10px"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="title">Your stats</div>
+      <h2>Summary</h2>
+      <div class="grid2" style="margin-top:14px">
+        <div class="card" style="box-shadow:none">
+          <div class="muted small">Total orders</div>
+          <div style="font-size:26px; font-weight:1000" id="kpiCount">0</div>
+        </div>
+        <div class="card" style="box-shadow:none">
+          <div class="muted small">Total spent</div>
+          <div style="font-size:26px; font-weight:1000" id="kpiSum">0 MAD</div>
+        </div>
+      </div>
+
+      <hr>
+      <div class="title">Statuses</div>
+      <div class="muted small" style="line-height:1.7; margin-top:8px">
+        قيد التنفيذ = pending<br>
+        جاري التنفيذ = in_progress<br>
+        تم التنفيذ = done<br>
+        ملغى = canceled
+      </div>
+    </div>
+  </section>
+
+  <section class="card" style="margin-top:14px">
+    <div class="title">Orders</div>
+    <h2>Your orders</h2>
+
+    <table class="table" style="margin-top:10px">
+      <thead>
+        <tr>
+          <th>Date</th><th>Service</th><th>Qty</th><th>Price</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="ordersBody"></tbody>
+    </table>
+  </section>
+</main>
+
+<script type="module" src="./app-dashboard.js"></script>
+</body>
+</html>

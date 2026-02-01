@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | Balala Folo</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#2563eb"/>
+        </linearGradient></defs>
+        <rect width="64" height="64" rx="16" fill="url(#g)"/>
+        <path d="M18 40c6-10 12-16 18-16 6 0 10 4 10 10 0 8-7 12-16 12H18z" fill="rgba(255,255,255,.92)"/>
+        <circle cx="42" cy="26" r="5" fill="rgba(255,255,255,.92)"/>
+      </svg>
+      <div>
+        <div style="font-size:16px;">Balala Folo</div>
+        <div style="font-size:12px; color:var(--muted); font-weight:900;">Client Portal</div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="./login.html">Login</a>
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./admin.html">Admin</a>
+    </div>
+    <a class="btn primary" href="./dashboard.html">Dashboard</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="grid2">
+    <div class="card">
+      <div class="title">Login / Register</div>
+      <h2>Sign in</h2>
+      <p class="muted">Create an account, then track your orders & status.</p>
+
+      <div class="grid2" style="margin-top:14px">
+        <div>
+          <label class="muted small">Email</label>
+          <input id="email" type="email" placeholder="you@email.com" />
+        </div>
+        <div>
+          <label class="muted small">Password</label>
+          <input id="password" type="password" placeholder="********" />
+        </div>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+        <button class="btn good" id="btnLogin" type="button">Login</button>
+        <button class="btn primary" id="btnRegister" type="button">Register</button>
+        <button class="btn" id="btnGoogle" type="button">Google</button>
+      </div>
+
+      <div id="status" class="muted small" style="margin-top:12px"></div>
+
+      <hr>
+      <div class="muted small">
+        ✅ No password for Instagram needed — only your IG @username when you create an order.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">How it works</div>
+      <h2>Track your orders</h2>
+      <ul class="muted" style="line-height:1.9; margin-top:10px">
+        <li>1) Create account</li>
+        <li>2) Submit order inside dashboard</li>
+        <li>3) Follow status: pending → in_progress → done</li>
+      </ul>
+      <div class="badge" style="margin-top:12px">Secure • Real promotion • Support</div>
+    </div>
+  </section>
+</main>
+
+<script type="module">
+  import { wireAuthUI } from "./app-auth.js";
+  wireAuthUI({ redirectIfLoggedIn:true });
+</script>
+</body>
+</html>
